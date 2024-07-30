@@ -1,8 +1,18 @@
 // tailwind.config.js
 module.exports = {
-  content: ["./views/**/*.ejs", "./public/**/*.html"],
+  content: ["./views/**/*.{html,js,ejs}"],
   theme: {
-    extend: {},
+    extend: {
+      // colors: {
+      //   primary: {
+      //     100: "#F5F5F5",
+      //     200: "#E5E5E5",
+      //   },
+      //   secondary: {
+      //     100: "#F5F5F5",
+      //     200: "#E5E5E5",
+      // },
+    },
   },
   plugins: [],
 };
