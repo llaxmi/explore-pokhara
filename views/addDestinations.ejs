@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <link href="/styles/main.css" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+
+<body class="bg-white-100 text-white">
+    <nav class="bg-green-800 p-4 text-white font-semibold flex justify-between items-center">
+        <h2 class="text-2xl">Explore Pokhara</h2>
+        <ul class="flex space-x-4">
+            <li><a href="/" class="hover:text-green-300">Home</a></li>
+            <li><a href="/categories" class="hover:text-green-300">Category</a></li>
+            <li><a href="/about" class="hover:text-green-300">About</a></li>
+        </ul>
+    </nav>
+
+    <main class="mt-10 mx-auto max-w-lg p-6 bg-green-700 rounded-lg shadow-md">
+        <h1 class="text-3xl font-bold text-white text-center mb-6" style="background-color: #399918;">Add Destination</h1>
+        <form method="post" action="/destinations/save">
+            <div class="mb-4">
+                <label for="title" class="block text-sm font-medium text-white">Name:</label>
+                <input type="text" class="form-control mt-1 block w-full px-3 py-2 bg-white-100 text-white border border-green-600 rounded-md" id="title" name="title" placeholder="Enter title">
+            </div>
+            <div class="mb-4">
+                <label for="location" class="block text-sm font-medium text-white">Location:</label>
+                <input type="text" class="form-control mt-1 block w-full px-3 py-2 bg-white-100 text-white border border-green-600 rounded-md" id="location" name="location" placeholder="Enter location name">
+            </div>
+            <div class="mb-4">
+                <label for="description" class="block text-sm font-medium text-white">Description:</label>
+                <input type="text" class="form-control mt-1 block w-full px-3 py-2 bg-white-100 text-white border border-green-600 rounded-md" id="description" name="description" placeholder="Enter description">
+            </div>
+            <div class="mb-4">
+                <label for="image" class="block text-sm font-medium text-white">Image:</label>
+                <input type="text" class="form-control mt-1 block w-full px-3 py-2 bg-white-100 text-white border border-green-600 rounded-md" id="image" name="image" placeholder="Enter image URL">
+            </div>
+            <button type="submit" class="w-full py-2 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700">Submit</button>
+        </form>
+    </main>
+</body>
+
+</html>
