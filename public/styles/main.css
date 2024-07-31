@@ -505,6 +505,7 @@ video {
   margin-left: auto;
   margin-right: auto;
 }
+<<<<<<< Updated upstream
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -517,6 +518,20 @@ video {
 .mt-10 {
   margin-top: 2.5rem;
 }
+=======
+.mt-10 {
+  margin-top: 2.5rem;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+.mt-1 {
+  margin-top: 0.25rem;
+}
+>>>>>>> Stashed changes
 .block {
   display: block;
 }
@@ -555,33 +570,21 @@ video {
 .border {
   border-width: 1px;
 }
-<<<<<<< HEAD
-.border-green-600 {
-  --tw-border-opacity: 1;
-  border-color: rgb(22 163 74 / var(--tw-border-opacity));
-=======
+<<<<<<< Updated upstream
 .border-primary-100 {
   --tw-border-opacity: 1;
   border-color: rgb(57 153 24 / var(--tw-border-opacity));
->>>>>>> aayushma
+=======
+.border-green-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(22 163 74 / var(--tw-border-opacity));
+>>>>>>> Stashed changes
 }
 .bg-green-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
-<<<<<<< HEAD
-.bg-green-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
-}
-=======
->>>>>>> aayushma
-.bg-green-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 101 52 / var(--tw-bg-opacity));
-}
-<<<<<<< HEAD
-=======
+<<<<<<< Updated upstream
 .bg-primary-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(57 153 24 / var(--tw-bg-opacity));
@@ -589,8 +592,32 @@ video {
 .bg-secondary-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(242 245 241 / var(--tw-bg-opacity));
+=======
+.bg-green-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
 }
->>>>>>> aayushma
+.bg-green-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 101 52 / var(--tw-bg-opacity));
+}
+.bg-green-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 83 45 / var(--tw-bg-opacity));
+}
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-green-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(134 239 172 / var(--tw-bg-opacity));
+}
+.bg-green-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+>>>>>>> Stashed changes
+}
 .p-2 {
   padding: 0.5rem;
 }
@@ -627,6 +654,17 @@ video {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
+<<<<<<< Updated upstream
+=======
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+>>>>>>> Stashed changes
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -639,6 +677,9 @@ video {
 }
 .font-semibold {
   font-weight: 600;
+}
+.font-medium {
+  font-weight: 500;
 }
 .text-gray-700 {
   --tw-text-opacity: 1;
@@ -656,38 +697,37 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+<<<<<<< Updated upstream
+=======
+.text-green-300 {
+  --tw-text-opacity: 1;
+  color: rgb(134 239 172 / var(--tw-text-opacity));
+}
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+>>>>>>> Stashed changes
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.hover\:bg-green-700:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
-}
-<<<<<<< HEAD
-=======
-.hover\:bg-secondary-100:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(242 245 241 / var(--tw-bg-opacity));
-}
-.hover\:bg-primary-100:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(57 153 24 / var(--tw-bg-opacity));
-}
+<<<<<<< Updated upstream
 .hover\:bg-primary-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(51 115 87 / var(--tw-bg-opacity));
 }
->>>>>>> aayushma
-.hover\:text-green-300:hover {
-  --tw-text-opacity: 1;
-  color: rgb(134 239 172 / var(--tw-text-opacity));
-}
-<<<<<<< HEAD
-=======
 .hover\:text-primary-200:hover {
   --tw-text-opacity: 1;
   color: rgb(51 115 87 / var(--tw-text-opacity));
+=======
+.hover\:bg-green-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
 }
->>>>>>> aayushma
+.hover\:text-green-300:hover {
+  --tw-text-opacity: 1;
+  color: rgb(134 239 172 / var(--tw-text-opacity));
+>>>>>>> Stashed changes
+}
