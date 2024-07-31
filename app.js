@@ -3,11 +3,24 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
-
+var destinationsRouter = require("./routes/destinations")
 var app = express();
+
+mongoose.connect('mongodb://localhost/EXPLORE-POKHARA').then(()=>{
+  console.log("connceted to db")
+});
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false })) 
+		
+// parse application/json
+app.use(bodyParser.json())
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -22,6 +35,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use("/destinations", destinationsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
