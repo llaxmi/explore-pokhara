@@ -6,9 +6,13 @@ router.get("/", function (req, res, next) {
   res.render("index", { title: "Pokhara" });
 });
 
-/* GET category page*/
-router.get("/category/:category", function (req, res, next) {
-  res.render("category", { title: "Pokhara", category: category });
+// /* GET category page*/
+// router.get("/category/:category", function (req, res, next) {
+//   res.render("category", { title: "Pokhara", category: category });
+// });
+
+router.get("/about", function (req, res, next) {
+  res.render("about", { title: "About Pokhara" });
 });
 
 module.exports = router;
