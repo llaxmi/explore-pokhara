@@ -501,9 +501,6 @@ video {
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
 }
-.static {
-  position: static;
-}
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -512,9 +509,6 @@ video {
 }
 .h-1\/2 {
   height: 50%;
-}
-.w-1\/2 {
-  width: 50%;
 }
 .w-full {
   width: 100%;
@@ -568,8 +562,4 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-.text-blue-500 {
-  --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity));
 }
