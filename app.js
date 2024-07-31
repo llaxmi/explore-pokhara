@@ -3,29 +3,17 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
-
+const mongoose = require("mongoose");
+require("dotenv").config();
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var destinationsRouter = require("./routes/destinations")
 var app = express();
 
-mongoose.connect('mongodb://localhost/EXPLORE-POKHARA').then(()=>{
-  console.log("connceted to db")
-});
-
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false })) 
-		
-// parse application/json
-app.use(bodyParser.json())
-
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
-
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -41,6 +29,19 @@ app.use("/destinations", destinationsRouter);
 app.use(function (req, res, next) {
   next(createError(404));
 });
+
+// Connect to MongoDB
+mongoose
+  .connect(process.env.DATABASE_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("Connected to MongoDB");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 // error handler
 app.use(function (err, req, res, next) {
