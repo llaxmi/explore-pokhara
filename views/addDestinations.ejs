@@ -12,11 +12,11 @@
 </head>
 
 <body class="bg-secondary-100 text-white">
-    <nav class="p-3 text-black font-semibold flex justify-between items-center">
+    <nav class="px-6 py-4 text-black font-semibold flex justify-between items-center">
         <h2 class="text-xl font-semibold p-2"><a></a>WanderPokhara</h2>
         <ul class="flex items-center space-x-4">
             <li><a href="/" class="hover:underline">Home</a></li>
-            <div class="relative inline-block">
+            <div class="relative inline-block rounded-sm">
                 <button class="bg-green-600 text-white py-4 px-6 text-sm border-none">Categories</button>
                 <div class="absolute hidden bg-gray-200 min-w-[160px] shadow-md z-10">
                     <a href="/category/unexplored"
@@ -25,12 +25,14 @@
                         class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Historical</a>
                     <a href="category/cultural"
                         class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Cultural</a>
+                    <a href="/category/naturistic"
+                        class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Naturistic</a>
                 </div>
             </div>
             <li><a href="/reviews" class="hover:underline">Review</a></li>
         </ul>
     </nav>
-    <main class="mt-10 mx-auto max-w-lg p-6 bg-primary-100 rounded-lg shadow-md">
+    <main class="mt-10 mx-auto max-w-lg px-6 py-4 bg-primary-100 rounded-lg shadow-md">
         <h1 class="text-3xl font-bold text-white text-center mb-6 bg-primary-100">Add Destination</h1>
         <form method="post" action="/destinations/save">
             <div class="mb-4">
@@ -52,10 +54,34 @@
                     id="description" name="description" placeholder="Enter description">
             </div>
             <div class="mb-4">
-                <label for="image" class="block text-sm font-medium text-white">Image:</label>
+                <label for="facilities" class="block text-sm font-medium text-white">Facilities:</label>
                 <input type="text"
                     class="form-control mt-1 block w-full px-3 py-2 bg-secondary-100 text-secondary-200 border rounded-md"
+                    id="facilities" name="facilities" placeholder="Enter facilities">
+            </div>
+            <div class="mb-4">
+                <label for="tips" class="block text-sm font-medium text-white">Tips:</label>
+                <input type="text"
+                    class="form-control mt-1 block w-full px-3 py-2 bg-secondary-100 text-secondary-200 border rounded-md"
+                    id="tips" name="tips" placeholder="Enter tips">
+            </div>
+            <div class="mb-4">
+                <label for="image" class="block text-sm font-medium text-white">Image:</label>
+                <input type="image"
+                    class="form-control mt-1 block w-full px-3 py-2 bg-secondary-100 text-secondary-200 border rounded-md"
                     id="image" name="image" placeholder="Enter image URL">
+            </div>
+            <div class="mb-4">
+                <label for="category" class="block text-sm font-medium text-white">Category:</label>
+                <input type="text"
+                    class="form-control mt-1 block w-full px-3 py-2 bg-secondary-100 text-secondary-200 border rounded-md"
+                    id="category" name="category" placeholder="Enter category">
+            </div>
+            <div class="mb-4">
+                <label for="currentStatus" class="block text-sm font-medium text-white">Current Status:</label>
+                <input type="text"
+                    class="form-control mt-1 block w-full px-3 py-2 bg-secondary-100 text-secondary-200 border rounded-md"
+                    id="currentStatus" name="currentStatus" placeholder="Enter current status">
             </div>
             <button type="submit"
                 class="w-full py-2 bg-green-800 text-white font-semibold rounded-md hover:bg-primary-200">Submit</button>

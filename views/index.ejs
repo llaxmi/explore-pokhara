@@ -17,7 +17,6 @@
    .gap-80 {
         gap: 80px; 
       }
-
       .text-shadow {
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
       }
@@ -56,7 +55,7 @@
             <a href="/category/cultural" class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Cultural</a>
           </div>
         </div>
-        <li><a href="/reviews" class="hover:underline">Review</a></li>
+        <li><a href="/reviews" class="hover:underline hover:underline-offset-4">Review</a></li>
       </ul>
     </nav>
 
@@ -67,10 +66,6 @@
       
       <!-- Overlay -->
       <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-
-  
-      
-
       <!-- Content -->
       <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white z-10">
         <h1 class="text-5xl font-bold">Welcome to Wander Pokhara</h1>
@@ -80,7 +75,6 @@
         </div>
       </div>
     </div>
-
    
   <!-- Content 
     <div class="m-4 grid grid-cols-2 gap-80 sm:grid-cols-12">
@@ -109,16 +103,12 @@
             </div>
           </div>
 
-        -->
-
           <div class="m-4 grid grid-cols-1 gap-8 sm:grid-cols-2 gap-80 ">
             <!-- Column 1: Heading -->
             <div class="min-h-[100px] rounded-lg flex items-center justify-center p-4">
               <h1 class="text-7xl font-roboto bg-gradient-text text-shadow hover-animate">A JOURNEY TO POKHARA</h1>
             </div>
-            
-
-           
+       
     
             <!-- Column 2: Paragraph and Button -->
             <div class="min-h-[100px] rounded-lg p-4">
@@ -128,13 +118,6 @@
       
 
     </div>
-    <script>
-      document.querySelector(".relative").addEventListener("mouseenter", function () {
-        this.querySelector(".absolute").classList.remove("hidden");
-      });
-      document.querySelector(".relative").addEventListener("mouseleave", function () {
-        this.querySelector(".absolute").classList.add("hidden");
-      });
-    </script>
+  <script src="/styles/script.js"></script>
   </body>
 </html>
