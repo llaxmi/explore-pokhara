@@ -9,11 +9,9 @@ require("dotenv").config();
 //add here the routes
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
-var destinationsRouter = require("./routes/destinations")
+var destinationsRouter = require("./routes/destinations");
 var reviewRouter = require("./routes/reviews");
 var app = express();
-
-
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -30,7 +28,6 @@ app.use("/users", usersRouter);
 app.use("/destinations", destinationsRouter);
 app.use("/reviews", reviewRouter);
 
-
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
@@ -38,10 +35,7 @@ app.use(function (req, res, next) {
 
 // Connect to MongoDB
 mongoose
-  .connect(process.env.DATABASE_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.DATABASE_URL)
   .then(() => {
     console.log("Connected to MongoDB");
   })
