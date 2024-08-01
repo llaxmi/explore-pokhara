@@ -25,6 +25,8 @@ app.use(express.static("public"));
 
 app.use("/", indexRouter);
 app.use("/destinations", destinationsRouter);
+app.use("/reviews", reviewRouter);
+
 
 app.use("/category", categoryRouter)
 
