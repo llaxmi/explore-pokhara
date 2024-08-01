@@ -11,21 +11,22 @@
 
 <body>
   <div class=" g-opacity-50">
-    <nav class=" bg-slate-300 p-3 text-black font-semibold flex justify-between items-center">
+    <nav class="px-6 py-3 text-black font-semibold flex justify-between items-center">
       <h2 class="text-xl font-semibold p-2"><a></a>WanderPokhara</h2>
-      <ul class="flex items-center space-x-4">
-        <li><a href="/" class="hover:underline">Home</a></li>
+      <ul class="flex items-center space-x-2">
         <div class="relative inline-block">
-          <button class=" text-white py-4 px-6 text-sm border-none">Categories</button>
-          <div class="absolute hidden bg-gray-200 min-w-[160px] shadow-md z-10">
+          <button class=" py-4 px-6 border-none hover:underline hover:underline-offset-4">Categories</button>
+          <div class="absolute hidden rounded-sm bg-gray-200 min-w-[160px] shadow-md z-10">
             <a href="/category/unexplored"
               class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Unexplored</a>
-            <a href="category/historical"
+            <a href="/category/historical"
               class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Historical</a>
-            <a href="category/cultural" class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Cultural</a>
+            <a href="/category/cultural" class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Cultural</a>
+            <a href="/category/naturistic"
+              class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Naturistic</a>
           </div>
         </div>
-        <li><a href="/reviews" class="hover:underline">Review</a></li>
+        <li><a href="/reviews" class="hover:underline hover:underline-offset-4">Review</a></li>
       </ul>
     </nav>
 
@@ -39,14 +40,7 @@
     <img src="https://www.trekkingtrail.com/uploads/img/dhampus-sarangkot-luxury-trek.jpg"
       alt="dhampus sarangkot luxury trek" class="w-full " />
   </div>
-  <script>
-    document.querySelector('.relative').addEventListener('mouseenter', function () {
-      this.querySelector('.absolute').classList.remove('hidden');
-    });
-    document.querySelector('.relative').addEventListener('mouseleave', function () {
-      this.querySelector('.absolute').classList.add('hidden');
-    });
-  </script>
+  <script src="/styles/script.js"></script>
 </body>
 
 </html>
