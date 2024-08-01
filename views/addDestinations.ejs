@@ -3,86 +3,93 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>
-        <%= title %>
-    </title>
+    <title>WanderPokhara</title>
     <link href="/styles/main.css" rel="stylesheet">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
 
-<body class="bg-secondary-100 text-white">
-    <nav class="p-3 text-black font-semibold flex justify-between items-center">
-        <h2 class="text-xl font-semibold p-2"><a></a>WanderPokhara</h2>
+<body class="bg-gray-100 text-gray-900">
+    <nav
+        class=" fixed px-12  top-0 w-full flex py-[5px] text-white text-lg font-semibold z-20   justify-between items-center bg-primary-100 shadow-xl shadow-slate-500">
+        <h2 class="text-xl font-semibold"><a href="/">WanderPokhara</a></h2>
         <ul class="flex items-center space-x-4">
             <li><a href="/" class="hover:underline">Home</a></li>
             <div class="relative inline-block">
-                <button class="bg-green-600 text-white py-4 px-6 text-sm border-none">Categories</button>
+                <button
+                    class="py-4 px-6 border-none text-semibold hover:underline hover:underline-offset-4">Categories</button>
                 <div class="absolute hidden bg-gray-200 min-w-[160px] shadow-md z-10">
                     <a href="/category/unexplored"
                         class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Unexplored</a>
-                    <a href="category/historical"
+                    <a href="/category/historical"
                         class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Historical</a>
-                    <a href="category/cultural"
+                    <a href="/category/cultural"
                         class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Cultural</a>
                 </div>
             </div>
             <li><a href="/reviews" class="hover:underline">Review</a></li>
         </ul>
     </nav>
-    <main class="mt-10 mx-auto max-w-lg p-6 bg-primary-100 rounded-lg shadow-md">
-        <h1 class="text-3xl font-bold text-white text-center mb-6 bg-primary-100">Add Destination</h1>
+    <main class="mt-24 mx-auto max-w-lg p-6 bg-white rounded-lg shadow-md">
+        <h1 class="text-3xl font-bold text-center mb-6 text-gray-700">Share Your Hidden Gem</h1>
         <form method="post" action="/destinations/save">
             <div class="mb-4">
-                <label for="title" class="block text-sm font-medium text-white">Name:</label>
+                <label for="title" class="block text-sm font-medium text-gray-700">Name:</label>
                 <input type="text"
-                    class="form-control mt-1 block w-full px-3 py-2 bg-secondary-100 text-secondary-200 border  rounded-md"
-                    id="title" name="title" placeholder="Enter title">
+                    class="mt-1 block w-full px-4 py-2 bg-gray-50 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                    id="title" name="title" placeholder="Place name" required>
             </div>
             <div class="mb-4">
-                <label for="location" class="block text-sm font-medium text-white">Location:</label>
+                <label for="location" class="block text-sm font-medium text-gray-700">Location:</label>
                 <input type="text"
-                    class="form-control mt-1 block w-full px-3 py-2 bg-secondary-100 text-secondary-200 border rounded-md"
-                    id="location" name="location" placeholder="Enter location name">
+                    class="mt-1 block w-full px-4 py-2 bg-gray-50 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                    id="location" name="location" placeholder="Enter location" required>
             </div>
             <div class="mb-4">
-                <label for="description" class="block text-sm font-medium text-white">Description:</label>
-                <input type="text"
-                    class="form-control mt-1 block w-full px-3 py-2 bg-secondary-100 text-secondary-200 border rounded-md"
-                    id="description" name="description" placeholder="Enter description">
+                <label for="description" class="block text-sm font-medium text-gray-700">Description about
+                    place:</label>
+                <textarea
+                    class="mt-1 block w-full px-4 py-2 bg-gray-50 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                    id="description" name="description" placeholder="Brief description" rows="3" required></textarea>
             </div>
             <div class="mb-4">
-                <label for="facilities" class="block text-sm font-medium text-white">Facilities:</label>
+                <label for="facilities" class="block text-sm font-medium text-gray-700">Accommodations:</label>
                 <input type="text"
-                    class="form-control mt-1 block w-full px-3 py-2 bg-secondary-100 text-secondary-200 border rounded-md"
-                    id="facilities" name="facilities" placeholder="Enter facilities">
+                    class="mt-1 block w-full px-4 py-2 bg-gray-50 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                    id="facilities" name="facilities" placeholder="Enter facilities" required>
             </div>
             <div class="mb-4">
-                <label for="tips" class="block text-sm font-medium text-white">Tips:</label>
+                <label for="tips" class="block text-sm font-medium text-gray-700">Travel tips:</label>
                 <input type="text"
-                    class="form-control mt-1 block w-full px-3 py-2 bg-secondary-100 text-secondary-200 border rounded-md"
-                    id="tips" name="tips" placeholder="Enter tips">
+                    class="mt-1 block w-full px-4 py-2 bg-gray-50 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                    id="tips" name="tips" placeholder="Tips for better experience" required>
             </div>
             <div class="mb-4">
-                <label for="image" class="block text-sm font-medium text-white">Image:</label>
-                <input type="image"
-                    class="form-control mt-1 block w-full px-3 py-2 bg-secondary-100 text-secondary-200 border rounded-md"
+                <label for="image" class="block text-sm font-medium text-gray-700">Image:</label>
+                <input type="text"
+                    class="mt-1 block w-full px-4 py-2 bg-gray-50 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                     id="image" name="image" placeholder="Enter image URL">
             </div>
             <div class="mb-4">
-                <label for="category" class="block text-sm font-medium text-white">Category:</label>
-                <input type="text"
-                    class="form-control mt-1 block w-full px-3 py-2 bg-secondary-100 text-secondary-200 border rounded-md"
-                    id="category" name="category" placeholder="Enter category">
+                <label for="image" class="block text-sm font-medium text-gray-700">Category:</label>
+                <select
+                    class="form-control mt-1 h-[32px] block w-full px-4 py-2 bg-white text-gray-700 border rounded-md"
+                    id="category" name="category">
+                    <option value="unexplored">Unexplored</option>
+                    <option value="cultural">Cultural</option>
+                    <option value="historical">Historical</option>
+                    <option value="naturistic">Naturistic</option>
+                    <option value="popular">Popular</option>
+                </select>
             </div>
             <div class="mb-4">
-                <label for="currentStatus" class="block text-sm font-medium text-white">Current Status:</label>
+                <label for="currentStatus" class="block text-sm font-medium text-gray-700">Availability:</label>
                 <input type="text"
-                    class="form-control mt-1 block w-full px-3 py-2 bg-secondary-100 text-secondary-200 border rounded-md"
-                    id="currentStatus" name="currentStatus" placeholder="Enter current status">
+                    class="mt-1 block w-full px-4 py-2 bg-gray-50 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                    id="currentStatus" name="currentStatus" placeholder="Enter current status" required>
             </div>
             <button type="submit"
-                class="w-full py-2 bg-green-800 text-white font-semibold rounded-md hover:bg-primary-200">Submit</button>
+                class="w-full py-2 bg-primary-100 text-white font-semibold rounded-md hover:bg-green-800 transition duration-300">Submit</button>
         </form>
     </main>
 </body>
