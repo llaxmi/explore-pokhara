@@ -10,29 +10,33 @@
 </head>
 
 <body class="bg-gray-100 text-gray-900">
-    <nav
-        class=" fixed px-12  top-0 w-full flex py-[5px] text-white text-lg font-semibold z-20   justify-between items-center bg-primary-100 shadow-xl shadow-slate-500">
+    <nav class="px-14 py-1 text-white font-semibold bg-primary-100 flex justify-between items-center text-md">
         <h2 class="text-xl font-semibold"><a href="/">WanderPokhara</a></h2>
         <ul class="flex items-center space-x-4">
             <li><a href="/" class="hover:underline">Home</a></li>
             <div class="relative inline-block">
                 <button
                     class="py-4 px-6 border-none text-semibold hover:underline hover:underline-offset-4">Categories</button>
-                <div class="absolute hidden bg-gray-200 min-w-[160px] shadow-md z-10">
+                <div class="absolute hidden  bg-gray-200 min-w-[160px] shadow-md z-10">
                     <a href="/category/unexplored"
                         class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Unexplored</a>
                     <a href="/category/historical"
                         class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Historical</a>
                     <a href="/category/cultural"
                         class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Cultural</a>
+                    <a href="/category/naturistic"
+                        class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Naturistic</a>
+                    <a href="/category/popular"
+                        class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Popular</a>
                 </div>
             </div>
             <li><a href="/reviews" class="hover:underline">Review</a></li>
         </ul>
     </nav>
-    <main class="mt-24 mx-auto max-w-lg p-6 bg-white rounded-lg shadow-md">
-        <h1 class="text-3xl font-bold text-center mb-6 text-gray-700">Share Your Hidden Gem</h1>
-        <form method="post" action="/destinations/save">
+
+    <main class="mt-8 mx-auto max-w-lg p-6 bg-white rounded-lg shadow-md">
+        <h1 class="text-3xl font-bold text-center mb-6 text-gray-700">Share Your Hidden Gem 🏔💎</h1>
+        <form method="post" action="/destinations/save" enctype='multipart/form-data'>
             <div class="mb-4">
                 <label for="title" class="block text-sm font-medium text-gray-700">Name:</label>
                 <input type="text"
@@ -53,10 +57,10 @@
                     id="description" name="description" placeholder="Brief description" rows="3" required></textarea>
             </div>
             <div class="mb-4">
-                <label for="facilities" class="block text-sm font-medium text-gray-700">Accommodations:</label>
+                <label for="accomodation" class="block text-sm font-medium text-gray-700">Accommodations:</label>
                 <input type="text"
                     class="mt-1 block w-full px-4 py-2 bg-gray-50 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                    id="facilities" name="facilities" placeholder="Enter facilities" required>
+                    id="accomodation" name="accomodation" placeholder="Enter accomodation" required>
             </div>
             <div class="mb-4">
                 <label for="tips" class="block text-sm font-medium text-gray-700">Travel tips:</label>
@@ -66,9 +70,9 @@
             </div>
             <div class="mb-4">
                 <label for="image" class="block text-sm font-medium text-gray-700">Image:</label>
-                <input type="text"
+                <input type="file" accept="image/*"
                     class="mt-1 block w-full px-4 py-2 bg-gray-50 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                    id="image" name="image" placeholder="Enter image URL">
+                    id="image" name="image">
             </div>
             <div class="mb-4">
                 <label for="image" class="block text-sm font-medium text-gray-700">Category:</label>
@@ -92,6 +96,8 @@
                 class="w-full py-2 bg-primary-100 text-white font-semibold rounded-md hover:bg-green-800 transition duration-300">Submit</button>
         </form>
     </main>
+
+    <script src="/styles/script.js"></script>
 </body>
 
 </html>

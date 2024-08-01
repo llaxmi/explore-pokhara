@@ -18,7 +18,18 @@ router.post("/save", async (req, res, next) => {
   }
 });
 
-
-
+/* GET reviews by title. */
+router.get("/place/:title", async function (req, res, next) {
+  try {
+    const title = req.params.title;
+    const reviews = await Review.find({ title: title });
+    res.render("review-detail", {
+      title: `Reviews for ${title}`,
+      reviews: reviews,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
 
 module.exports = router;
