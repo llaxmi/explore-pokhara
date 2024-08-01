@@ -613,6 +613,11 @@ video {
 .justify-between {
   justify-content: space-between;
 }
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
@@ -641,6 +646,16 @@ video {
 }
 .rounded-sm {
   border-radius: 0.125rem;
+}
+.rounded {
+  border-radius: 0.25rem;
+}
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+.rounded-s {
+  border-start-start-radius: 0.25rem;
+  border-end-start-radius: 0.25rem;
 }
 .border {
   border-width: 1px;
@@ -679,7 +694,7 @@ video {
 }
 .bg-primary-100 {
   --tw-bg-opacity: 1;
-  background-color: rgb(57 153 24 / var(--tw-bg-opacity));
+  background-color: rgb(35 151 63 / var(--tw-bg-opacity));
 }
 .bg-secondary-100 {
   --tw-bg-opacity: 1;
@@ -696,10 +711,6 @@ video {
 .bg-slate-200\/20 {
   background-color: rgb(226 232 240 / 0.2);
 }
-.bg-slate-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
-}
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -707,14 +718,8 @@ video {
 .p-2 {
   padding: 0.5rem;
 }
-.p-3 {
-  padding: 0.75rem;
-}
 .p-4 {
   padding: 1rem;
-}
-.p-6 {
-  padding: 1.5rem;
 }
 .px-3 {
   padding-left: 0.75rem;
@@ -739,6 +744,10 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 .text-center {
   text-align: center;
@@ -796,7 +805,7 @@ video {
 }
 .text-primary-200 {
   --tw-text-opacity: 1;
-  color: rgb(51 115 87 / var(--tw-text-opacity));
+  color: rgb(25 111 47 / var(--tw-text-opacity));
 }
 .text-secondary-200 {
   --tw-text-opacity: 1;
@@ -844,10 +853,13 @@ video {
 }
 .hover\:bg-primary-200:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(51 115 87 / var(--tw-bg-opacity));
+  background-color: rgb(25 111 47 / var(--tw-bg-opacity));
 }
 .hover\:underline:hover {
   text-decoration-line: underline;
+}
+.hover\:underline-offset-4:hover {
+  text-underline-offset: 4px;
 }
 .hover\:shadow-md:hover {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
