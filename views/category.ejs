@@ -67,7 +67,10 @@
           <h2 class="text-base font-semibold">Current availability: <%= place.currentStatus %>
           </h2>
         </div>
-        <div ><a href="/reviews" class="self-end font-medium mb-4 hover:text-blue-700 cursor-pointer">Review →</a>></div>
+        <div>
+          <a href="/reviews/<%= place._id %>"
+            class="self-end font-medium mb-4 hover:text-blue-700 cursor-pointer">Review →</a>
+        </div>
       </div>
       <% }) %>
   </div>

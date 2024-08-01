@@ -6,7 +6,7 @@ const { upload } = require("../middlewares/uploads");
 /* GET home page. */
 router.get("/add", function (_, res) {
   res.render("addDestinations", { title: "Add Destination" });
-  //passing value to addDestinations.ejs
+  //passing value to addDestinations.ej=
 });
 
 router.post("/save", upload.single("image"), function (req, res) {

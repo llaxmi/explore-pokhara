@@ -593,6 +593,9 @@ video {
 .mt-24 {
   margin-top: 6rem;
 }
+.mt-8 {
+  margin-top: 2rem;
+}
 .block {
   display: block;
 }
@@ -607,9 +610,6 @@ video {
 }
 .hidden {
   display: none;
-}
-.h-\[32px\] {
-  height: 32px;
 }
 .h-\[32px\] {
   height: 32px;
@@ -718,10 +718,6 @@ video {
 .rounded-md {
   border-radius: 0.375rem;
 }
-.rounded-sm {
-  border-radius: 0.125rem;
-}
-<<<<<<< Updated upstream
 .rounded-l-lg {
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
@@ -730,8 +726,6 @@ video {
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
-=======
->>>>>>> Stashed changes
 .border {
   border-width: 1px;
 }
@@ -743,10 +737,6 @@ video {
 }
 .border-none {
   border-style: none;
-}
-.border-gray-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 .border-gray-300 {
   --tw-border-opacity: 1;
@@ -783,10 +773,6 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
-.bg-gray-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
-}
 .bg-green-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
@@ -817,6 +803,12 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-slate-300\/20 {
+  background-color: rgb(203 213 225 / 0.2);
+}
+.bg-slate-400\/20 {
+  background-color: rgb(148 163 184 / 0.2);
+}
 .bg-opacity-40 {
   --tw-bg-opacity: 0.4;
 }
@@ -832,10 +824,6 @@ video {
 }
 .p-6 {
   padding: 1.5rem;
-}
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
 }
 .px-14 {
   padding-left: 3.5rem;
@@ -877,20 +865,13 @@ video {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-<<<<<<< Updated upstream
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
-.py-\[5px\] {
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
 .pr-3 {
   padding-right: 0.75rem;
 }
-=======
->>>>>>> Stashed changes
 .text-center {
   text-align: center;
 }
@@ -919,10 +900,6 @@ video {
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 .text-sm {
   font-size: 0.875rem;
@@ -971,6 +948,9 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-white\/80 {
+  color: rgb(255 255 255 / 0.8);
 }
 .no-underline {
   text-decoration-line: none;
