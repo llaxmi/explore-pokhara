@@ -15,7 +15,7 @@ const DestinationSchema = mongoose.Schema({
   },
   category: {
     type: String,
-    enum: ["unexplored", "cultural", "historic", "naturistic", "popular"],
+    enum: ["unexplored", "cultural", "historical", "naturistic", "popular"],
   },
   currentStatus: String,
   createdAt: { type: Date, default: Date.now },

@@ -13,6 +13,8 @@ var reviewRouter = require("./routes/reviews");
 var categoryRouter = require("./routes/category");
 var app = express();
 
+
+
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -32,6 +34,8 @@ app.use("/category", categoryRouter);
 app.use(function (req, res, next) {
   next(createError(404));
 });
+
+
 
 // Connect to MongoDB
 mongoose
