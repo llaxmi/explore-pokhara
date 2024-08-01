@@ -16,6 +16,7 @@ router.post("/save", upload.single("image"), function (req, res) {
       ...req.body,
       image: req.file.filename,
     });
+    // console.log(destination);
     destination.save();
     res.redirect(`/category/${destination.category}`);
   } catch (error) {

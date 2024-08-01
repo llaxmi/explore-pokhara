@@ -11,13 +11,12 @@
 </head>
 
 <body>
-  <nav class="px-14 py-1 text-white font-semibold bg-primary-100 flex justify-between items-center text-md">
-    <h2 class="text-xl font-semibold p-2">
-      <a href="/">WanderPokhara</a>
-    </h2>
+  <nav class="px-16 text-white font-semibold bg-primary-100 flex justify-between items-center text-md">
+    <a href="/"><img src="https://www.reshot.com/preview-assets/icons/C2KHAM4NS9/explore-C2KHAM4NS9.svg"
+        alt="Dhampus Sarangkot Luxury Trek" class="size-12 m-2 self-center" /></a>
     <ul class="flex items-center space-x-4">
       <div class="relative inline-block">
-        <button class="py-4 px-6 border-none text-semibold hover:underline hover:underline-offset-4">
+        <button class="py-4 px-6 border-none text-lg text-semibold hover:underline hover:underline-offset-4">
           Categories
         </button>
         <div class="absolute hidden bg-gray-200 min-w-[160px] shadow-md z-10">
@@ -31,7 +30,6 @@
           <a href="/category/popular" class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Popular</a>
         </div>
       </div>
-      <li><a href="/reviews" class="hover:underline hover:underline-offset-4">Review</a></li>
     </ul>
   </nav>
 
@@ -40,7 +38,7 @@
       <%= title %>
     </h1>
     <a href="/destinations/add" class="py-3 px-4 bg-blue-600 text-white font-semibold hover:bg-blue-700 rounded-md">
-      Want to add new place? Add here
+      Want to add new place? 📍 Add here
     </a>
   </div>
 
@@ -48,7 +46,7 @@
     <% places.forEach(function(place) { %>
       <div
         class="m-4 bg-slate-200 hover:shadow-xl group hover:shadow-slate-500/45 transition-all duration-500 text-black/80 rounded-md pr-3 flex space-x-8 items-center w-2/3">
-        <img src="/uploads/<%= place.image %>" alt=" Pokhara" class="flex h-full w-1/4 object-cover rounded-md">
+        <img src="/uploads/<%= place.image %>" alt="Pokhara" class="h-[300px] w-1/4 object-cover rounded-md">
         <div class="flex flex-col space-y-2 my-4 flex-1 text-slate-800">
           <h2
             class="text-2xl font-semibold text-primary-200 group-hover:underline underline-offset-4 transition-all duration-500">
@@ -61,15 +59,14 @@
           </h2>
           <h2 class="text-base font-semibold">Accommodation: <%= place.facilities %>
           </h2>
-          <h2 class="text-base font-semibold">Tips: Visit in the morning</h2>
-          <h2 class="text-base font-semibold">Category: <%= place.category %>
-          </h2>
-          <h2 class="text-base font-semibold">Current availability: <%= place.currentStatus %>
-          </h2>
+          <h2 class="text-base font-semibold">Tips: <%= place.tips %>
+              <h2 class="text-base font-semibold">Category: <%= place.category %>
+              </h2>
+              <h2 class="text-base font-semibold">Current availability: <%= place.currentStatus %>
+              </h2>
         </div>
-        <div>
-          <a href="/reviews/<%= place._id %>"
-            class="self-end font-medium mb-4 hover:text-blue-700 cursor-pointer">Review →</a>
+        <div class="self-end pb-4">
+          <a href="/reviews/<%= place._id %>" class="font-medium mb-4 hover:text-blue-700 cursor-pointer">Review →</a>
         </div>
       </div>
       <% }) %>
