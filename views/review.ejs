@@ -11,12 +11,20 @@
 </head>
 
 <body class="bg-gray-100  min-h-screen flex flex-col">
-  <nav class="bg-green-600 p-2 text-white font-semibold flex justify-between text-center items-center ">
-    <h2>Explore Pokhara</h2>
-    <ul class="flex justify-around space-x-4">
-      <a href="/">Home</a>
-      <a href="">Categories</a>
-      <a href="">Reviews</a>
+  <nav class="p-3 text-black font-semibold flex justify-between items-center">
+    <h2 class="text-xl font-semibold p-2"><a></a>WanderPokhara</h2>
+    <ul class="flex items-center space-x-4">
+      <li><a href="/" class="hover:underline">Home</a></li>
+      <div class="relative inline-block">
+        <button class="bg-green-600 text-white py-4 px-6 text-sm border-none">Categories</button>
+        <div class="absolute hidden bg-gray-200 min-w-[160px] shadow-md z-10">
+          <a href="/category/unexplored"
+            class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Unexplored</a>
+          <a href="category/historical" class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Historical</a>
+          <a href="category/cultural" class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Cultural</a>
+        </div>
+      </div>
+      <li><a href="/reviews" class="hover:underline">Review</a></li>
     </ul>
   </nav>
   <div class="flex justify-center flex-col items-center p-4">

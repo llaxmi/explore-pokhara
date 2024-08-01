@@ -5,192 +5,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2491/2491929.png" type="image/x-icon" />
-  <title>Explore Pokhara</title>
+  <title>WanderPokhara</title>
   <link href="/styles/main.css" rel="stylesheet">
-
-  </style>
 </head>
 
 <body>
-  <div class="relative g-opacity-50">
-    <h1 class="text-4xl font-bold text-white text-center mt-10 absolute inset-x-0 top-4 z-10">
-      Welcome to Explore <%= title %>
-        <p class="text-lg text-center text-white">
+  <div class=" g-opacity-50">
+    <nav class=" bg-slate-300 p-3 text-black font-semibold flex justify-between items-center">
+      <h2 class="text-xl font-semibold p-2"><a></a>WanderPokhara</h2>
+      <ul class="flex items-center space-x-4">
+        <li><a href="/" class="hover:underline">Home</a></li>
+        <div class="relative inline-block">
+          <button class=" text-white py-4 px-6 text-sm border-none">Categories</button>
+          <div class="absolute hidden bg-gray-200 min-w-[160px] shadow-md z-10">
+            <a href="/category/unexplored"
+              class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Unexplored</a>
+            <a href="category/historical"
+              class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Historical</a>
+            <a href="category/cultural" class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Cultural</a>
+          </div>
+        </div>
+        <li><a href="/reviews" class="hover:underline">Review</a></li>
+      </ul>
+    </nav>
+
+    <h1 class="text-4xl mt-20 font-bold text-center  inset-x-0 top-4 z-10">
+      Welcome to Wander<%= title %>
+        <p class="text-lg text-center animate-pulse">
           Discover the beauty of <%= title%>.
         </p>
     </h1>
 
     <img src="https://www.trekkingtrail.com/uploads/img/dhampus-sarangkot-luxury-trek.jpg"
-      alt="dhampus sarangkot luxury trek" class="blurred-section " />
+      alt="dhampus sarangkot luxury trek" class="w-full " />
   </div>
-
-
-  <nav class="bg-green-600 p-3 text-white font-semibold flex justify-between items-center">
-    <h2 class="text-2xl font-semibold p-4"><a></a>Explore Pokhara</h2>
-    <ul class="flex items-center space-x-4">
-      <li><a href="/" class="hover:underline">Home</a></li>
-      <li><a href="/login" class="hover:underline">Categories</a></li>
-      <li><a href="/reviews" class="hover:underline">Review</a></li>
-      <li><a href="/destinations/add" class="hover:underline">Add destination</a></li>
-
-    </ul>
-    </li>
-    </ul>
-  </nav>
-  <div>
-    <p>
-    <h1 class="pt-4 text-4xl " style="color: #40525c"> Pokhara </h1>
-    <p style="color:#263038">
-    </p>
-  </div>
-  <div class="container ">
-
-    <!-- First Section: Image Left, Text Right 
-     <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-6">
-      <div class="flex-shrink-0 md:w-1/2">
-        <img
-          src="https://saarang.com.np/wp-content/uploads/2023/08/Tal-Barahi-Temple-img.jpg"
-          alt="Tal Barahi Temple"
-          class="w-full h-auto rounded-lg shadow-lg"
-        />
-      </div>
-
-      <div class="md:w-1/2 text-center md:text-left">
-        <p class="text-lg text-gray-700">
-          Tal Barahi Temple is an iconic landmark located in Pokhara, Nepal. It is situated on an island in Phewa Lake and is known for its unique two-story pagoda style architecture.
-        </p>
-      </div>
-    </div>
-
-
-    <div class="flex flex-col md:flex-row-reverse items-center md:items-start space-y-6 md:space-y-0 md:space-x-6">
-      <div class="flex-shrink-0 md:w-1/2">
-        <img
-          src=" https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Bindabasini_temple_pokhara.JPG/1920px-Bindabasini_temple_pokhara.JPG"
-          alt="Sarangkot Trek"
-          class="w-full h-auto rounded-lg shadow-lg"
-        />
-      </div>
-
-      <div class="md:w-1/2 text-center md:text-left">
-        <p class="text-lg text-gray-700">
-          The Sarangkot trek is a beautiful short hike offering panoramic views of the Annapurna mountain range and the Pokhara Valley.
-        </p>
-      </div>
-    </div>
-
-
-
-</div>
-
-  
--->
-
-
-    <main>
-
-
-      <section class="destinations">
-        <h2>Popular Destinations</h2>
-        <div class="cards">
-          <a href="https://google.com" class="card">
-            <img
-              src="https://admin.ntb.gov.np/image-cache/Pokhara_wvp_lt-1630391627.jpg?p=768&s=24f9bb253df02b398728b3fde10f8246"
-              alt="Destination 1">
-            <h3>Phewa Lake</h3>
-          </a>
-
-          <a href="" class="card">
-            <img
-              src="https://admin.ntb.gov.np/image-cache/Gupteshwar_cave_Pokhara_DSC_4478_copy-1630040213.jpg?p=768&s=4d99e5a1d46217dce0913e3c26c2e17c"
-              alt="Destination 2">
-            <h3>Mahendra Gufa</h3>
-
-          </a>
-          <a href="" class="card">
-            <img
-              src="https://admin.ntb.gov.np/image-cache/Seti_River_SS-1630040055.jpg?p=768&s=279ad84502c8948b41f9567596bc15c9"
-              alt="Destination 3">
-            <h3>Seti River</h3>
-
-          </a>
-          <a href="" class="card">
-            <img
-              src="https://admin.ntb.gov.np/image-cache/David_Falls_SS-1630390196.jpg?p=768&s=8ea9fdaf7555cac9706682effb036db2"
-              alt="Destination 3">
-            <h3>Davis Fall</h3>
-
-          </a>
-          <a href="" class="card">
-            <img
-              src="https://admin.ntb.gov.np/image-cache/Bindhyabasini_temple_by_SS-1630040372.jpg?p=768&s=5fdd5d8049abc13dbd97caf14907cd42"
-              alt="Destination 3">
-            <h3>Bindabashini</h3>
-
-          </a>
-          <a href="" class="card">
-            <img
-              src="https://admin.ntb.gov.np/image-cache/Pokhara_oy_lt_(1)-1630391646.jpg?p=768&s=68dda0f88f92ddb6f52b4fabe602a975"
-              alt="Destination 3">
-            <h3>World Peace Pagoda</h3>
-
-          </a>
-        </div>
-      </section>
-
-      <section class="thingstodo">
-        <h2>Things To Do</h2>
-        <div class="cards">
-          <a href="" class="card">
-            <img
-              src="https://admin.ntb.gov.np/image-cache/Pokhara5-1624435929.jpg?p=768&s=877a9b4ab784d9d40e2d8cbcda205c5c"
-              alt="Destination 1">
-            <h3>Boating</h3>
-
-          </a>
-          <a href="" class="card">
-            <img
-              src="https://admin.ntb.gov.np/image-cache/mountain_viewing-1630574668.jpg?p=768&s=d0447b4b77ad60953d4dd66fa574e4e4"
-              alt="Destination 2">
-            <h3>Mountain Viewing</h3>
-
-          </a>
-          <a href="" class="card">
-            <img
-              src="https://admin.ntb.gov.np/image-cache/bungee_jumping_in_pokhara_nepal-1624445542.jpg?p=768&s=9acf57f79839a9ca496c35353792281b"
-              alt="Destination 3">
-            <h3>Bungee Jumping</h3>
-
-          </a>
-          <a href="" class="card">
-            <img
-              src="https://admin.ntb.gov.np/image-cache/poonhill_pg_adventure_1624441115_resized1920-1625157224.jpeg?p=768&s=8a5b91c0e9edea5eadb7f168556bc1ca"
-              alt="Destination 3">
-            <h3>Hiking</h3>
-
-          </a>
-          <a href="" class="card">
-            <img
-              src="https://admin.ntb.gov.np/image-cache/SS_tile_pic-1630574013.jpg?p=768&s=da33b6f9b4cddbe87131c669fc18e8f7"
-              alt="Destination 3">
-            <h3>Paragliding</h3>
-
-          </a>
-          <a href="" class="card">
-            <img
-              src="https://admin.ntb.gov.np/image-cache/Zip_lining-1624443823.jpg?p=768&s=bd76aacd124e29a1860ea52526ec6bb1"
-              alt="Destination 3">
-            <h3>Zipling</h3>
-
-          </a>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <p>&copy; 2024 Explore Pokhara. All rights reserved.</p>
-    </footer>
-
+  <script>
+    document.querySelector('.relative').addEventListener('mouseenter', function () {
+      this.querySelector('.absolute').classList.remove('hidden');
+    });
+    document.querySelector('.relative').addEventListener('mouseleave', function () {
+      this.querySelector('.absolute').classList.add('hidden');
+    });
+  </script>
 </body>
 
 </html>
