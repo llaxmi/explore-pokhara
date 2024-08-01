@@ -5,18 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
-    <%= title%>
+    <%= title %>
   </title>
   <link href="/styles/main.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="px-14 py-3 text-white font-semibold bg-primary-100 flex justify-between items-center">
-    <h2 class="text-xl font-semibold p-2"><a href="/">WanderPokhara</a></h2>
+  <nav class="px-14 py-1 text-white font-semibold bg-primary-100 flex justify-between items-center text-md">
+    <h2 class="text-xl font-semibold p-2">
+      <a href="/">WanderPokhara</a>
+    </h2>
     <ul class="flex items-center space-x-4">
       <div class="relative inline-block">
-        <button class="py-4 px-6 border-none text-semibold hover:underline hover:underline-offset-4">Categories</button>
-        <div class="absolute hidden  bg-gray-200 min-w-[160px] shadow-md z-10">
+        <button class="py-4 px-6 border-none text-semibold hover:underline hover:underline-offset-4">
+          Categories
+        </button>
+        <div class="absolute hidden bg-gray-200 min-w-[160px] shadow-md z-10">
           <a href="/category/unexplored"
             class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Unexplored</a>
           <a href="/category/historical"
@@ -24,52 +28,50 @@
           <a href="/category/cultural" class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Cultural</a>
           <a href="/category/naturistic"
             class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Naturistic</a>
-            <a href="/category/popular" class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Popular</a>
-
+          <a href="/category/popular" class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Popular</a>
         </div>
       </div>
       <li><a href="/reviews" class="hover:underline hover:underline-offset-4">Review</a></li>
     </ul>
   </nav>
+
   <div class="py-4 px-16 flex justify-between">
     <h1 class="text-3xl font-serif">
-      <%= title%>
+      <%= title %>
     </h1>
-    <a href="/destinations/add"
-      class=" py-3 px-4 bg-blue-600 text-white font-semibold hover:bg-blue-700  rounded-md">Want
-      to add new place? Add here</a>
+    <a href="/destinations/add" class="py-3 px-4 bg-blue-600 text-white font-semibold hover:bg-blue-700 rounded-md">
+      Want to add new place? Add here
+    </a>
   </div>
+
   <div class="flex flex-wrap items-center justify-center">
-    <%places.forEach(function(place){%>
+    <% places.forEach(function(place) { %>
       <div
-        class="m-4 bg-slate-200 hover:shadow-xl group hover:shadow-slate-500/45 transition-all duration-500 text-black/80 rounded-md pr-3  flex space-x-8 items-center w-2/3">
-        <img
-          src="https://i0.wp.com/www.littlethingstravel.com/wp-content/uploads/2017/07/International-Mountain-Museum-Things-to-do-in-Pokhara-Nepal.jpg?ssl=1"
-          alt="Pokhara" class="h-full w-1/4 rounded-md">
+        class="m-4 bg-slate-200 hover:shadow-xl group hover:shadow-slate-500/45 transition-all duration-500 text-black/80 rounded-md pr-3 flex space-x-8 items-center w-2/3">
+        <img src="/uploads/<%= place.image %>" alt=" Pokhara" class="flex h-full w-1/4 object-cover rounded-md">
         <div class="flex flex-col space-y-2 my-4 flex-1 text-slate-800">
           <h2
             class="text-2xl font-semibold text-primary-200 group-hover:underline underline-offset-4 transition-all duration-500">
-            <%= place.title%>
+            <%= place.title %>
           </h2>
-          <h2 class="text-base font-semibold">
-            <%= place.description%>
+          <h2 class="text-base font-semibold text-justify">
+            <%= place.description %>
           </h2>
+          <h2 class="text-base font-semibold">Location: <%= place.location %>
           </h2>
-          <h2 class="text-base font-semibold">Location:<%= place.location%>
+          <h2 class="text-base font-semibold">Accommodation: <%= place.facilities %>
           </h2>
+          <h2 class="text-base font-semibold">Tips: Visit in the morning</h2>
+          <h2 class="text-base font-semibold">Category: <%= place.category %>
           </h2>
-          <h2 class="text-base font-semibold">Accommodation: <%= place.facilities%>
-          </h2>
-          <h2 class="text-base font-semibold">Tips: Visit morinig time</h2>
-          <h2 class="text-base font-semibold">Category: <%= place.category%>
-          </h2>
-          <h2 class="text-base font-semibold">Current availability: <%= place.currentStatus%>
+          <h2 class="text-base font-semibold">Current availability: <%= place.currentStatus %>
           </h2>
         </div>
         <div class="self-end font-medium mb-4 hover:text-blue-700 cursor-pointer">Review →</div>
       </div>
-      <%})%>
+      <% }) %>
   </div>
+
   <script src="/styles/script.js"></script>
 </body>
 

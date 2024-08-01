@@ -1,18 +1,26 @@
 var express = require("express");
 var router = express.Router();
 var Destinations = require("../models/destinations");
+const { upload } = require("../middlewares/uploads");
 
 /* GET home page. */
-router.get("/add", function (req, res, next) {
+router.get("/add", function (_, res) {
   res.render("addDestinations", { title: "Add Destination" });
   //passing value to addDestinations.ejs
 });
 
-router.post("/save", function (req, res, next) {
-  const destination = new Destinations(req.body);
-  destination.save();
-  console.log(destination.category);
-  res.redirect(`/category/${destination.category}`);
+router.post("/save", upload.single("image"), function (req, res) {
+  try {
+    console.log(req.file);
+    const destination = new Destinations({
+      ...req.body,
+      image: req.file.filename,
+    });
+    destination.save();
+    res.redirect(`/category/${destination.category}`);
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 module.exports = router;

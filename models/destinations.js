@@ -9,10 +9,7 @@ const DestinationSchema = mongoose.Schema({
   description: String,
   accomodation: String,
   tips: String,
-  image: {
-    data: Buffer, // Binary data
-    contentType: String, // Mime type (e.g., 'image/png')
-  },
+  image: String,
   category: {
     type: String,
     enum: ["unexplored", "cultural", "historical", "naturistic", "popular"],
