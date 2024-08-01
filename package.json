@@ -1,5 +1,5 @@
 {
-  "name": "explore-pokhara",
+  "name": "Wander-pokhara",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.19",
+    "body-parser": "^1.20.2",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^16.4.5",

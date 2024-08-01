@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= title%>
+  </title>
+  <link href="/styles/main.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="bg-green-600 p-3 text-white font-semibold flex justify-between items-center">
+    <h2 class="text-xl font-semibold p-2"><a></a>Wander Pokhara</h2>
+    <ul class="flex items-center space-x-4">
+      <li><a href="/" class="hover:underline">Home</a></li>
+      <li><a href="/category" class="hover:underline">Categories</a></li>
+      <li><a href="/reviews" class="hover:underline">Review</a></li>
+    </ul>
+  </nav>
+  <div class="p-4">
+    <h1 class="text-3xl font-serif">
+      <%= title%>
+    </h1>
+  </div>
+  <%places.forEach(function(place){%>
+    <div class="m-4 bg-slate-200 text-black/80 rounded-md p-4 flex space-x-8 items-center">
+      <img
+        src="https://i0.wp.com/www.littlethingstravel.com/wp-content/uploads/2017/07/International-Mountain-Museum-Things-to-do-in-Pokhara-Nepal.jpg?ssl=1"
+        alt="Pokhara" class="size-56 rounded-sm object-cover">
+      <div class="flex flex-col space-y-2">
+        <h2 class="text-2xl font-semibold text-primary-200">
+          <%= place.title%>
+        </h2>
+        <h2 class="text-base font-semibold">
+          <%= place.description%>
+        </h2>
+        </h2>
+        <h2 class="text-base font-semibold">Location:<%= place.location%>
+        </h2>
+        </h2>
+        <h2 class="text-base font-semibold">Facilities: <%= place.facilities%>
+        </h2>
+        <h2 class="text-base font-semibold">Tips: Visit morinig time</h2>
+        <h2 class="text-base font-semibold">Category: <%= place.category%>
+        </h2>
+
+      </div>
+
+    </div>
+    <%})%>
+</body>
+
+</html>
