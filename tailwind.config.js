@@ -13,6 +13,10 @@ module.exports = {
           100: "#f2f5f1",
           200: "#151515",
         },
+
+        fontFamily: {
+          'roboto': ['Roboto', 'sans-serif'],
+        },
       },
     },
   },

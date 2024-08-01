@@ -1,52 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/2491/2491929.png"
+      type="image/x-icon"
+    />
+    <title>WanderPokhara</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <style>
+   .custom-height {
+        height: 570px; 
+   }
+   .gap-80 {
+        gap: 80px; 
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2491/2491929.png" type="image/x-icon" />
-  <title>WanderPokhara</title>
-  <link href="/styles/main.css" rel="stylesheet">
-</head>
+      .text-shadow {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+      }
 
-<body>
-  <div class=" g-opacity-50">
-    <nav class=" bg-slate-300 p-3 text-black font-semibold flex justify-between items-center">
-      <h2 class="text-xl font-semibold p-2"><a></a>WanderPokhara</h2>
+      .bg-gradient-text {
+      background: linear-gradient(45deg, rgba(11, 0, 0, 0.206), #ff9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hover-animate {
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .hover-animate:hover {
+      transform: scale(1.05);
+      color: #ff9;
+    }
+    .search-input {
+      background: transparent;
+      border: none;
+      outline: none;
+    }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar-->
+    <nav class="fixed top-0 w-full flex justify-between items-center p-3 text-white font-semibold z-20 bg-transparent">
+      <h2 class="text-xl font-semibold p-2">WanderPokhara</h2>
       <ul class="flex items-center space-x-4">
         <li><a href="/" class="hover:underline">Home</a></li>
         <div class="relative inline-block">
-          <button class=" text-white py-4 px-6 text-sm border-none">Categories</button>
+          <button class="text-white py-4 px-6 text-sm font-semibold ">Categories</button>
           <div class="absolute hidden bg-gray-200 min-w-[160px] shadow-md z-10">
-            <a href="/category/unexplored"
-              class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Unexplored</a>
-            <a href="category/historical"
-              class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Historical</a>
-            <a href="category/cultural" class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Cultural</a>
+            <a href="/category/unexplored" class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Unexplored</a>
+            <a href="/category/historical" class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Historical</a>
+            <a href="/category/cultural" class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Cultural</a>
           </div>
         </div>
         <li><a href="/reviews" class="hover:underline">Review</a></li>
       </ul>
     </nav>
 
-    <h1 class="text-4xl mt-20 font-bold text-center  inset-x-0 top-4 z-10">
-      Welcome to Wander<%= title %>
-        <p class="text-lg text-center animate-pulse">
-          Discover the beauty of <%= title%>.
-        </p>
-    </h1>
+    <!-- Hero Section -->
+    <div class="relative custom-height">
+      <!-- Background Image -->
+      <img src="https://www.trekkingtrail.com/uploads/img/dhampus-sarangkot-luxury-trek.jpg" alt="Dhampus Sarangkot Luxury Trek" class="w-full h-full object-cover" />
+      
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
 
-    <img src="https://www.trekkingtrail.com/uploads/img/dhampus-sarangkot-luxury-trek.jpg"
-      alt="dhampus sarangkot luxury trek" class="w-full " />
-  </div>
-  <script>
-    document.querySelector('.relative').addEventListener('mouseenter', function () {
-      this.querySelector('.absolute').classList.remove('hidden');
-    });
-    document.querySelector('.relative').addEventListener('mouseleave', function () {
-      this.querySelector('.absolute').classList.add('hidden');
-    });
-  </script>
-</body>
+  
+      
 
+      <!-- Content -->
+      <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white z-10">
+        <h1 class="text-5xl font-bold">Welcome to Wander Pokhara</h1>
+        <p class="text-2xl animate-pulse mt-2">Discover the beauty of Pokhara.</p>
+        <div class="search-bar">
+          <input type="text" placeholder="Search..." class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2" />
+        </div>
+      </div>
+    </div>
+
+   
+  <!-- Content 
+    <div class="m-4 grid grid-cols-2 gap-80 sm:grid-cols-12">
+      <div class="m-4 grid grid-cols-1 gap-8 sm:grid-cols-2 gap-80">
+        
+        <div class="min-h-[100px] rounded-lg bg-gray-200 flex items-centerp-4">
+          <h1 class="text-2xl font-bold">JOURNEY TO POKHARA</h1>
+        </div>
+        <div class = "sm:col-span-2 min-h-[100px] rounded-lg " > 
+          <p> Hello</p></div>
+
+          </div>
+
+      
+
+          <div class="m-4 grid grid-cols-1 gap-8 sm:grid-cols-2 gap-80">
+           
+            <div class="min-h-[100px] rounded-lg flex items-center justify-center p-4">
+              <h1 class="text-6xl bg-fontFamily-roboto-1">JOURNEY TO POKHARA</h1>
+            </div>
+      
+            
+            <div class="min-h-[100px] rounded-lg p-4">
+              <p class="mb-4">Pokhara, with its serene lakes and majestic mountain views, offers a unique blend of natural beauty and cultural experiences. Explore the scenic landscapes, enjoy various outdoor activities, and immerse yourself in the rich local traditions.</p>
+              <a href="#" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 transition">Learn More</a>
+            </div>
+          </div>
+
+        -->
+
+          <div class="m-4 grid grid-cols-1 gap-8 sm:grid-cols-2 gap-80 ">
+            <!-- Column 1: Heading -->
+            <div class="min-h-[100px] rounded-lg flex items-center justify-center p-4">
+              <h1 class="text-7xl font-roboto bg-gradient-text text-shadow hover-animate">A JOURNEY TO POKHARA</h1>
+            </div>
+            
+
+           
+    
+            <!-- Column 2: Paragraph and Button -->
+            <div class="min-h-[100px] rounded-lg p-4">
+              <p class="mb-4 font-roboto">Pokhara, with its serene lakes and majestic mountain views, offers a unique blend of natural beauty and cultural experiences. Explore the scenic landscapes, enjoy various outdoor activities, and immerse yourself in the rich local traditions.</p>
+              <a href="#" class="bg-green-500 text-white py-2 px-4  hover:bg-green-600 transition font-roboto">Learn More</a>
+            </div>
+      
+
+    </div>
+    <script>
+      document.querySelector(".relative").addEventListener("mouseenter", function () {
+        this.querySelector(".absolute").classList.remove("hidden");
+      });
+      document.querySelector(".relative").addEventListener("mouseleave", function () {
+        this.querySelector(".absolute").classList.add("hidden");
+      });
+    </script>
+  </body>
 </html>
