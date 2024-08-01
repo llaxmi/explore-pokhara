@@ -11,11 +11,11 @@
 </head>
 
 <body>
-  <nav class="px-6 py-3 text-white font-semibold bg-primary-100 flex justify-between items-center">
+  <nav class="px-14 py-3 text-white font-semibold bg-primary-100 flex justify-between items-center">
     <h2 class="text-xl font-semibold p-2"><a href="/">WanderPokhara</a></h2>
     <ul class="flex items-center space-x-4">
       <div class="relative inline-block">
-        <button class="py-4 px-6 border-none hover:underline hover:underline-offset-4">Categories</button>
+        <button class="py-4 px-6 border-none text-semibold hover:underline hover:underline-offset-4">Categories</button>
         <div class="absolute hidden  bg-gray-200 min-w-[160px] shadow-md z-10">
           <a href="/category/unexplored"
             class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Unexplored</a>
@@ -31,38 +31,46 @@
       <li><a href="/reviews" class="hover:underline hover:underline-offset-4">Review</a></li>
     </ul>
   </nav>
-  <div class="p-4 flex justify-between">
+  <div class="py-4 px-16 flex justify-between">
     <h1 class="text-3xl font-serif">
       <%= title%>
     </h1>
-    <a href="/destinations/add" class="block text-black py-3 px-4 no-underline hover:bg-gray-300 hover:rounded-md">Want to add any unexplores places? Click here!</a>
-
+    <a href="/destinations/add"
+      class=" py-3 px-4 bg-blue-600 text-white font-semibold hover:bg-blue-700  rounded-md">Want
+      to add new place? Add here</a>
   </div>
-  <%places.forEach(function(place){%>
-    <div class="m-4 bg-slate-200 text-black/80 rounded-md p-4 flex space-x-8 items-center">
-      <img
-        src="https://i0.wp.com/www.littlethingstravel.com/wp-content/uploads/2017/07/International-Mountain-Museum-Things-to-do-in-Pokhara-Nepal.jpg?ssl=1"
-        alt="Pokhara" class="size-56 rounded-sm object-cover">
-      <div class="flex flex-col space-y-2">
-        <h2 class="text-2xl font-semibold text-primary-200">
-          <%= place.title%>
-        </h2>
-        <h2 class="text-base font-semibold">
-          <%= place.description%>
-        </h2>
-        </h2>
-        <h2 class="text-base font-semibold">Location:<%= place.location%>
-        </h2>
-        </h2>
-        <h2 class="text-base font-semibold">Facilities: <%= place.facilities%>
-        </h2>
-        <h2 class="text-base font-semibold">Tips: Visit morinig time</h2>
-        <h2 class="text-base font-semibold">Category: <%= place.category%>
-        </h2>
+  <div class="flex flex-wrap items-center justify-center">
+    <%places.forEach(function(place){%>
+      <div
+        class="m-4 bg-slate-200 hover:shadow-xl group hover:shadow-slate-500/45 transition-all duration-500 text-black/80 rounded-md pr-3  flex space-x-8 items-center w-2/3">
+        <img
+          src="https://i0.wp.com/www.littlethingstravel.com/wp-content/uploads/2017/07/International-Mountain-Museum-Things-to-do-in-Pokhara-Nepal.jpg?ssl=1"
+          alt="Pokhara" class="h-full w-1/4 rounded-md">
+        <div class="flex flex-col space-y-2 my-4 flex-1 text-slate-800">
+          <h2
+            class="text-2xl font-semibold text-primary-200 group-hover:underline underline-offset-4 transition-all duration-500">
+            <%= place.title%>
+          </h2>
+          <h2 class="text-base font-semibold">
+            <%= place.description%>
+          </h2>
+          </h2>
+          <h2 class="text-base font-semibold">Location:<%= place.location%>
+          </h2>
+          </h2>
+          <h2 class="text-base font-semibold">Accommodation: <%= place.facilities%>
+          </h2>
+          <h2 class="text-base font-semibold">Tips: Visit morinig time</h2>
+          <h2 class="text-base font-semibold">Category: <%= place.category%>
+          </h2>
+          <h2 class="text-base font-semibold">Current availability: <%= place.currentStatus%>
+          </h2>
+        </div>
+        <div class="self-end font-medium mb-4 hover:text-blue-700 cursor-pointer">Review →</div>
       </div>
-    </div>
-    <%})%>
-      <script src="/styles/script.js"></script>
+      <%})%>
+  </div>
+  <script src="/styles/script.js"></script>
 </body>
 
 </html>

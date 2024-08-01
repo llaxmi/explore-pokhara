@@ -7,7 +7,7 @@ const DestinationSchema = mongoose.Schema({
     type: String,
   },
   description: String,
-  facilities: String,
+  accomodation: String,
   tips: String,
   image: {
     data: Buffer, // Binary data
