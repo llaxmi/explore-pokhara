@@ -11,8 +11,8 @@ router.get("/add", function (req, res, next) {
 router.post("/save", function (req, res, next) {
   const destination = new Destinations(req.body);
   destination.save();
-  console.log(destination);
-  res.redirect("/");
+  console.log(destination.category);
+  res.redirect(`/category/${destination.category}`);
 });
 
 module.exports = router;
