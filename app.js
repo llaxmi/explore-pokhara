@@ -11,6 +11,7 @@ var indexRouter = require("./routes/index");
 var destinationsRouter = require("./routes/destinations");
 var reviewRouter = require("./routes/reviews");
 var categoryRouter = require("./routes/category");
+var searchRouter = require("./routes/search");
 var app = express();
 
 // view engine setup
@@ -27,6 +28,7 @@ app.use("/", indexRouter);
 app.use("/destinations", destinationsRouter);
 app.use("/reviews", reviewRouter);
 app.use("/category", categoryRouter);
+app.use("/search", searchRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
