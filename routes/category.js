@@ -5,7 +5,9 @@ var Destinations = require("../models/destinations");
 router.get("/:category", async function (req, res, next) {
   try {
     const category = req.params.category;
-    const places = await Destinations.find({ category: category });
+    const places = await Destinations.find({ category: category }).sort({
+      createdAt: -1,
+    });
     res.render("category", {
       title: `${
         category.charAt(0).toLocaleUpperCase() + category.slice(1)
@@ -14,7 +16,6 @@ router.get("/:category", async function (req, res, next) {
     });
   } catch (err) {
     console.log(err);
-    next(err); // Pass the error to the next middleware
   }
 });
 
