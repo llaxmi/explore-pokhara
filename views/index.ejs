@@ -7,18 +7,26 @@
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2491/2491929.png" type="image/x-icon" />
   <title>WanderPokhara</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="/styles/main.css" rel="stylesheet" />
+</head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2491/2491929.png" type="image/x-icon" />
+  <title>WanderPokhara</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link href="/styles/main.css" rel="stylesheet">
 </head>
 
 <body>
   <!-- Navbar -->
-  <nav
-    class="fixed px-14 top-0 w-full flex justify-between items-center text-white bg-white font-semibold z-20 bg-transparent/50">
+  <nav class="fixed px-14 top-0 w-full flex justify-between items-center font-semibold z-20 bg-transparent/50">
     <a href="/"><img src="https://www.reshot.com/preview-assets/icons/C2KHAM4NS9/explore-C2KHAM4NS9.svg"
         alt="Dhampus Sarangkot Luxury Trek" class="size-12 m-2 self-center" /></a>
     <ul class="flex items-center space-x-4">
       <div class="relative inline-block">
-        <button class="text-black py-4 px-6 text-lg font-semibold">Categories</button>
+        <button class="text-white py-4 px-6 text-lg font-semibold">Categories</button>
         <div class="absolute hidden  bg-gray-200 min-w-[160px] shadow-md z-10">
           <a href="/category/unexplored"
             class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Unexplored</a>
@@ -29,12 +37,11 @@
             class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Naturistic</a>
           <a href="/category/popular" class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Popular</a>
         </div>
-      </div>
     </ul>
   </nav>
 
   <!-- Hero Section -->
-  <div class="relative custom-height">
+  <div class="relative custom-height ">
     <!-- Background Image -->
     <img src="https://www.trekkingtrail.com/uploads/img/dhampus-sarangkot-luxury-trek.jpg"
       alt="Dhampus Sarangkot Luxury Trek" class="w-full h-full object-cover" />
@@ -42,71 +49,70 @@
     <!-- Overlay -->
     <div class="absolute inset-0 bg-black bg-opacity-40"></div>
     <!-- Content -->
-    <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white z-10 space-y-4">
-      <h1 class="text-5xl font-bold mt-24">Welcome to Wander Pokhara</h1>
-      <p class="text-2xl animate-pulse font-semibold">Discover the beauty of Pokhara.</p>
+    <div class="absolute inset-0 flex mt-8 flex-col justify-center items-center text-center text-white z-10 space-y-12">
+      <h1 class="text-5xl font-bold mt-24 -mb-7">Welcome to Wander Pokhara</h1>
+      <p class="text-2xl animate-pulse font-semibold">
+        Discover the beauty of Pokhara.
+      </p>
 
-      <div class="w-1/4 flex" >
-        <input type="search" id="default-search" 
-          class="rounded-l-lg block w-full p-4 text-sm h-[36px] text-gray-900 border border-gray-300focus:border-blue-500"
-          placeholder="Where do you want to explore?" required />
-        <a type="submit" href="/search" 
-          class="rounded-r-lg bg-blue-500 hover:bg-blue-700 text-white font-medium text-sm px-4 py-2 transition duration-300">Find</a>
+      <div class="w-1/3 flex flex-row ">
+        <form action="/search" method="get" class="flex flex-row w-full">
+          <input type="text" id="default-search" name="q"
+            class="rounded-sm block w-full  p-4 text-sm h-[42px] text-gray-900 border border-gray-300 focus:border-blue-500"
+            placeholder="Where do you want to explore?" required />
+          <a type="submit" href="/search"
+            class="rounded-sm bg-primary-100 hover:bg-green-700 text-white font-medium text-md px-4 py-2 transition duration-300">Find</a>
+        </form>
       </div>
     </div>
   </div>
 
   <!-- Features Section -->
-  <section class="py-14 bg-gray-100">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-4xl font-bold mb-8 font-serif text-black/80">Explore Our Features</h2>
-      <div class="flex flex-wrap justify-center gap-8">
-        <div
-          class="w-full sm:w-1/2 lg:w-1/4 bg-white p-6 rounded-lg shadow-sm hover:shadow-xl transition-all duration-700">
-          <h3 class="text-2xl font-semibold mb-2 font-serif text-black/80">Insights</h3>
-          <p class="text-slate-500">Immerse yourself in the rich beauty and heritage of Pokhara.
-          </p>
-        </div>
-        <div
-          class="w-full sm:w-1/2 lg:w-1/4 bg-white p-6 rounded-lg shadow-sm hover:shadow-xl transition-all duration-700">
-          <h3 class="text-2xl font-semibold mb-2 font-serif text-black/80">Categories of Places</h3>
-          <p class="text-slate-500">Explore places categorized as unexplored, cultural, historical, naturistic, and
-            popular.</p>
-        </div>
-        <div
-          class="w-full sm:w-1/2 lg:w-1/4 bg-white p-6 rounded-lg shadow-sm hover:shadow-xl transition-all duration-700">
-          <h3 class="text-2xl font-semibold mb-2 font-serif text-black/80">Best Experiences</h3>
-          <p class="text-slate-500">Taste the flavors of Pokhara with our recommendations.</p>
-        </div>
+  <div class="w-full p-8 text-center bg-slate-200 pb-8">
+    <h2 class="text-4xl font-bold mb-8 font-serif text-black/80">Explore Our Features</h2>
+    <div class="flex flex-wrap justify-center gap-8">
+      <div
+        class="w-full sm:w-1/2 lg:w-1/4 bg-white p-6 rounded-lg shadow-sm hover:shadow-xl transition-all duration-700">
+        <h3 class="text-2xl font-semibold mb-2 font-serif text-black/80">Insights</h3>
+        <p class="text-slate-500">Immerse yourself in the rich beauty and heritage of Pokhara.
+        </p>
+      </div>
+      <div
+        class="w-full sm:w-1/2 lg:w-1/4 bg-white p-6 rounded-lg shadow-sm hover:shadow-xl transition-all duration-700">
+        <h3 class="text-2xl font-semibold mb-2 font-serif text-black/80">Categories of Places</h3>
+        <p class="text-slate-500">Explore places categorized as unexplored, cultural, historical, naturistic, and
+          popular.</p>
+      </div>
+      <div
+        class="w-full sm:w-1/2 lg:w-1/4 bg-white p-6 rounded-lg shadow-sm hover:shadow-xl transition-all duration-700">
+        <h3 class="text-2xl font-semibold mb-2 font-serif text-black/80">Best Experiences</h3>
+        <p class="text-slate-500">Taste the flavors of Pokhara with our recommendations.</p>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- Statistics Section -->
-  <section class="py-6 text-white items-center ">
+  <section class="py-6 text-white items-center">
     <div class="container mx-auto px-4 text-center -mt-10">
       <h2 class="text-4xl font-bold mb-6 text-black mt-12 font-serif text-black/80">Our Impact</h2>
       <div class="flex flex-wrap justify-center gap-8">
         <div
-          class="w-full hover:scale-105 transition-all hover:duration-700 sm:w-1/4 bg-green-500 p-6 rounded-lg shadow-lg">
+          class="w-full hover:scale-105 transition-all hover:duration-700 sm:w-1/5 bg-green-500 p-6 rounded-lg shadow-lg">
           <h3 class="text-3xl  font-bold mb-2 font-serif text-white">200+</h3>
           <p class="font-medium">Recommended Places</p>
         </div>
         <div
-          class="w-full hover:scale-105 transition-all hover:duration-700 sm:w-1/3 bg-blue-600 p-6 rounded-lg shadow-lg">
+          class="w-full hover:scale-105 transition-all hover:duration-700 sm:w-1/4 bg-blue-600 p-6 rounded-lg shadow-lg">
           <h3 class="text-3xl  font-bold mb-2 font-serif text-white">300+</h3>
           <p class="font-medium">Happy Visitors</p>
         </div>
         <div
-          class="w-full hover:scale-105 transition-all hover:duration-700 sm:w-1/4 bg-green-500 p-6 rounded-lg shadow-lg">
+          class="w-full hover:scale-105 transition-all hover:duration-700 sm:w-1/5 bg-green-500 p-6 rounded-lg shadow-lg">
           <h3 class="text-3xl  font-bold mb-2 font-serif text-white">400+</h3>
           <p class="font-medium">Community Support</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <script src="/styles/script.js"></script>
+      <script src="/styles/script.js"></script>
 </body>
 
 </html>
