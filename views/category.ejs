@@ -41,33 +41,50 @@
   </div>
 
   <div class="flex flex-wrap items-center justify-center">
-    <% places.forEach(function(place) { %>
+    <%places.forEach(function(place) { %>
       <div
-        class="m-4 bg-slate-200 hover:shadow-xl group hover:shadow-slate-500/45 transition-all duration-500 text-black/80 rounded-md pr-3 flex space-x-8 items-center w-2/3">
+        class="m-4 bg-slate-100 hover:shadow-xl group hover:shadow-slate-500/45 transition-all duration-500 text-black/80 rounded-md pr-3 flex space-x-8 items-center w-3/5">
         <img src="/uploads/<%= place.image %>" alt="Pokhara" class="h-[300px] w-1/4 object-cover rounded-md">
-        <div class="flex flex-col space-y-2 my-4 flex-1 text-slate-800">
+        <div class="flex flex-col space-y-1 flex-1 text-slate-800">
+          <span class="text-slate-400 text-sm font-medium capitalize">
+            <%= place.category %>
+          </span>
           <h2
             class="text-2xl font-semibold text-primary-200 group-hover:underline underline-offset-4 transition-all duration-500">
             <%= place.title %>
           </h2>
-          <h2 class="text-base font-semibold text-justify">
+          <h2 class="text-base font-semibold">📍</span>
+            <%= place.location %>
+          </h2>
+          <h2 class="text-base font-semibold text-justify text-slate-600">
             <%= place.description %>
           </h2>
-          <h2 class="text-base font-semibold">Location: <%= place.location %>
+
+          <h2 class="text-base font-semibold">
+            🏨 <%=place.accomodation %>
           </h2>
-          <h2 class="text-base font-semibold">Accommodation: <%= place.accomodation %>
+
+          <h2 class="text-base font-semibold"><span class="text-slate-500">Current Availability:</span>
+            <%= place.currentStatus %>
           </h2>
-          <h2 class="text-base font-semibold">Tips: <%= place.tips %>
-              <h2 class="text-base font-semibold">Category: <%= place.category %>
-              </h2>
-              <h2 class="text-base font-semibold">Current availability: <%= place.currentStatus %>
-              </h2>
+          <div class="flex flex-col space-y-2 max-w-fit my-2 bg-blue-200 p-2 rounded-md flex-wrap">
+            <h2 class="text-sm font-semibold text-blue-500">💡
+              <%= place.tips %>
+            </h2>
+          </div>
         </div>
         <div class="self-end pb-4">
           <a href="/reviews/<%= place._id %>" class="font-medium mb-4 hover:text-blue-700 cursor-pointer">Review →</a>
         </div>
       </div>
       <% }) %>
+        <div class="flex flex-col items-center justify-center mt-80">
+          <% if (!places.length) { %>
+            <h1 class="text-center text-3xl font-bold text-red-600">Sorry!😔 The place you are looking for cannot be
+              found at the moment.</h1>
+            <% } %>
+        </div>
+
   </div>
 
   <script src="/styles/script.js"></script>
