@@ -34,7 +34,9 @@ app.use("/search", searchRouter);
 app.use(function (req, res, next) {
   next(createError(404));
 });
-
+app.listen(process.env.SERVER_PORT || 8000, () => {
+  console.log('Server Started PORT ==> ', process.env.SERVER_PORT);
+});
 // Connect to MongoDB
 mongoose
   .connect(process.env.DATABASE_URL)
