@@ -4,7 +4,6 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const mongoose = require("mongoose");
-const port = process.env.PORT || 4000;
 require("dotenv").config();
 
 //add here the routes
