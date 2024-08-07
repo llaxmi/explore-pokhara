@@ -12,9 +12,10 @@
 </head>
 
 <body class="bg-gray-100 text-gray-900">
-  <nav class="px-4 md:px-16 text-white font-semibold bg-primary-100 flex justify-between items-center text-md">
+  <nav
+    class="fixed w-full flex-1 px-4 md:px-16 text-white font-semibold bg-primary-100 flex justify-between items-center text-md">
     <a href="/"><img src="https://www.reshot.com/preview-assets/icons/C2KHAM4NS9/explore-C2KHAM4NS9.svg"
-        alt="Dhampus Sarangkot Luxury Trek" class="h-10 self-center" /></a>
+        alt="Dhampus Sarangkot Luxury Trek" class="h-10 m-2 self-center" /></a>
     <ul class="flex items-center space-x-4">
       <div class="relative inline-block">
         <button
@@ -33,12 +34,13 @@
     </ul>
   </nav>
 
-  <div class="py-4 px-4 md:px-16 flex flex-col md:flex-row justify-between items-center">
-    <h1 class="text-2xl md:text-3xl font-serif">
+  <div class="py-4 px-4 md:px-16 flex flex-col md:flex-row justify-between">
+    <h1 class="text-2xl md:text-2xl font-serif">
       <%= title %>
     </h1>
     <a href="/destinations/add"
-      class="py-3 px-4 bg-blue-600 text-white font-semibold hover:bg-blue-700 rounded-md mt-4 md:mt-0">Found a new
+      class="py-2 px-3 bg-blue-600 text-white font-semibold hover:bg-blue-700 rounded-md mt-4 lg:mt-16 md:text-sm w-max self-center">Found
+      a new
       place? 📍 Add here</a>
   </div>
 
@@ -47,33 +49,33 @@
       <div
         class="m-4 bg-white hover:shadow-xl group hover:shadow-slate-500/45 transition-all duration-500 text-black/80 rounded-md p-3 flex flex-col md:flex-row space-x-0 md:space-x-8 items-center w-full md:w-3/5">
         <img src="/uploads/<%= place.image %>" alt="Pokhara"
-          class="h-[200px] md:h-[300px] w-full md:w-1/4 object-cover rounded-md mb-4 md:mb-0">
+          class="h-[200px] md:h-max w-full md:w-1/3 object-fill  rounded-md mb-4 md:mb-0">
         <div class="flex flex-col space-y-2 flex-1 text-slate-800">
-          <span class="text-slate-400 text-sm font-medium capitalize">
+          <span class="text-slate-400 text-sm lg:text-sm font-medium capitalize">
             <%= place.category %>
           </span>
           <h2
-            class="md:text-2xl text-xl font-semibold text-primary-200 group-hover:underline underline-offset-4 transition-all duration-500">
+            class="text-xl md:text-lg font-semibold text-primary-200 group-hover:underline underline-offset-4 transition-all duration-500">
             <%= place.title %>
           </h2>
-          <h2 class="md:text-base text-sm font-semibold">📍 <%= place.location %>
+          <h2 class="text-sm font-semibold">📍 <%= place.location %>
           </h2>
-          <p class="md:text-base text-justify text-sm text-slate-600">
+          <p class="text-justify text-sm md:text-base text-slate-600">
             <%= place.description %>
           </p>
-          <h2 class="font-semibold md:text-base text-sm">🏨 <%= place.accomodation %>
+          <h2 class="font-semibold text-sm md:text-sm">🏨 <%= place.accomodation %>
           </h2>
-          <h2 class="md:text-base text-sm font-semibold"><span class="text-slate-500">Current Availability:</span>
+          <h2 class="text-xs md:text-sm font-semibold"><span class="text-slate-500">Current Availability:</span>
             <%= place.currentStatus %>
           </h2>
-          <div class="flex flex-col space-y-2 max-w-fit my-2 bg-blue-200 p-2 rounded-md">
-            <h2 class="text-sm font-semibold text-justify text-blue-500">💡 <%= place.tips %>
+          <div class="flex flex-col space-y-2 md:text-sm max-w-fit my-2 bg-blue-200 p-2 rounded-md">
+            <h2 class="text-sm font-semibold text-blue-500">💡 <%= place.tips %>
             </h2>
           </div>
         </div>
-        <div class="self-end md:self-center md:ml-4">
-          <a href="/reviews/<%= place._id %>"
-            class="font-medium mb-4 md:text-base text-sm hover:text-blue-700 cursor-pointer">Review →</a>
+        <div class="self-end md:self-end md:ml-4">
+          <a href="/reviews/<%= place._id %>" class="font-medium mb-4 text-sm hover:text-blue-700 cursor-pointer">Review
+            →</a>
         </div>
       </div>
       <% }) %>
