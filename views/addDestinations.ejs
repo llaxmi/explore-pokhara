@@ -15,8 +15,9 @@
                 alt="Dhampus Sarangkot Luxury Trek" class="size-12 m-2 self-center" /></a>
         <ul class="flex items-center space-x-4">
             <div class="relative inline-block">
-                <button class="text-white py-4 px-2 text-2xl border-none hover:underline hover:underline-offset-4 font-semibold">Categories</button>
-                <div class="absolute hidden  bg-gray-200 min-w-[160px] shadow-md z-10">
+                <button
+                    class="text-white py-2 md:py-4 px-2 md:text-2xl border-none hover:underline hover:underline-offset-4 font-semibold">Categories</button>
+                <div class="absolute hidden bg-gray-200 min-w-[160px] shadow-md z-10">
                     <a href="/category/unexplored"
                         class="block text-black py-3 px-4 no-underline hover:bg-gray-300">Unexplored</a>
                     <a href="/category/historical"
@@ -32,66 +33,78 @@
         </ul>
     </nav>
 
-    <main class="mt-8 mx-auto max-w-lg p-6 bg-white rounded-lg shadow-md">
-        <h1 class="text-3xl font-bold text-center mb-6 text-gray-700">Share Your Hidden Gem 🏔💎</h1>
-        <form method="post" action="/destinations/save" enctype='multipart/form-data'>
-            <div class="mb-4">
-                <label for="title" class="block text-sm font-medium text-gray-700">Name:</label>
-                <input type="text"
-                    class="mt-1 block w-full px-4 py-2 bg-gray-50 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                    id="title" name="title" placeholder="Place name" required>
-            </div>
-            <div class="mb-4">
-                <label for="location" class="block text-sm font-medium text-gray-700">Location:</label>
-                <input type="text"
-                    class="mt-1 block w-full px-4 py-2 bg-gray-50 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                    id="location" name="location" placeholder="Enter location" required>
-            </div>
-            <div class="mb-4">
-                <label for="description" class="block text-sm font-medium text-gray-700">Description about
-                    place:</label>
-                <textarea
-                    class="mt-1 block w-full px-4 py-2 bg-gray-50 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                    id="description" name="description" placeholder="Brief description" rows="3" required></textarea>
-            </div>
-            <div class="mb-4">
-                <label for="accomodation" class="block text-sm font-medium text-gray-700">Accommodations:</label>
-                <input type="text"
-                    class="mt-1 block w-full px-4 py-2 bg-gray-50 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                    id="accomodation" name="accomodation" placeholder="Enter accomodation" required>
-            </div>
-            <div class="mb-4">
-                <label for="tips" class="block text-sm font-medium text-gray-700">Travel tips:</label>
-                <input type="text"
-                    class="mt-1 block w-full px-4 py-2 bg-gray-50 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                    id="tips" name="tips" placeholder="Tips for better experience" required>
-            </div>
-            <div class="mb-4">
-                <label for="image" class="block text-sm font-medium text-gray-700">Image:</label>
-                <input type="file" accept="image/*"
-                    class="mt-1 block w-full px-4 py-2 bg-gray-50 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                    id="image" name="image">
-            </div>
-            <div class="mb-4">
-                <label for="image" class="block text-sm font-medium text-gray-700">Category:</label>
-                <select class="form-control mt-1 p-8 block w-full px-4 py-2 bg-white text-gray-700 border rounded-md"
-                    id="category" name="category">
-                    <option value="unexplored">Unexplored</option>
-                    <option value="cultural">Cultural</option>
-                    <option value="historical">Historical</option>
-                    <option value="naturistic">Naturistic</option>
-                    <option value="popular">Popular</option>
-                </select>
-            </div>
-            <div class="mb-4">
-                <label for="currentStatus" class="block text-sm font-medium text-gray-700">Availability:</label>
-                <input type="text"
-                    class="mt-1 block w-full px-4 py-2 bg-gray-50 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                    id="currentStatus" name="currentStatus" placeholder="Enter current status" required>
-            </div>
-            <button type="submit"
-                class="w-full py-2 bg-primary-100 text-white font-semibold rounded-md hover:bg-green-800 transition duration-300">Submit</button>
-        </form>
+    <main class="flex justify-center p-8 md:p-4">
+        <div class="w-full max-w-3xl p-6 bg-white rounded-lg shadow-md">
+            <h1 class="text-3xl font-bold text-center mb-6 text-gray-700">Share Your Hidden Gem 🏔💎</h1>
+            <form method="post" action="/destinations/save" enctype='multipart/form-data'>
+                <div class="mb-4">
+                    <label for="title"
+                        class="block text-xl md:text-base mb-2 md:mb-0 font-medium text-gray-700">Name:</label>
+                    <input type="text"
+                        class="mt-1 block w-full px-4 py-2 bg-gray-50 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                        id="title" name="title" placeholder="Place name" required>
+                </div>
+                <div class="mb-4">
+                    <label for="location"
+                        class="block text-xl md:text-base  mb-2 md:mb-0 font-medium text-gray-700">Location:</label>
+                    <input type="text"
+                        class="mt-1 block w-full px-4 py-2 bg-gray-50 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                        id="location" name="location" placeholder="Enter location" required>
+                </div>
+                <div class="mb-4">
+                    <label for="description"
+                        class="block text-xl md:text-base  mb-2 md:mb-0 font-medium text-gray-700">Description about
+                        place:</label>
+                    <textarea
+                        class="mt-1 block w-full px-4 py-2 bg-gray-50 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                        id="description" name="description" placeholder="Brief description" rows="3"
+                        required></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="accomodation"
+                        class="block text-xl md:text-base  mb-2 md:mb-0 font-medium text-gray-700">Accommodations:</label>
+                    <input type="text"
+                        class="mt-1 block w-full px-4 py-2 bg-gray-50 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                        id="accomodation" name="accomodation" placeholder="Enter accomodation" required>
+                </div>
+                <div class="mb-4">
+                    <label for="tips" class="block text-xl md:text-base  mb-2 md:mb-0 font-medium text-gray-700">Travel
+                        tips:</label>
+                    <input type="text"
+                        class="mt-1 block w-full px-4 py-2 bg-gray-50 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                        id="tips" name="tips" placeholder="Tips for better experience" required>
+                </div>
+                <div class="mb-4">
+                    <label for="image"
+                        class="block text-xl md:text-base  mb-2 md:mb-0 font-medium text-gray-700">Image:</label>
+                    <input type="file" accept="image/*"
+                        class="mt-1 block w-full px-4 py-2 bg-gray-50 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                        id="image" name="image">
+                </div>
+                <div class="mb-4">
+                    <label for="category"
+                        class="block text-xl md:text-base  mb-2 md:mb-0 font-medium text-gray-700">Category:</label>
+                    <select
+                        class="form-control mt-1 p-8 block w-full px-4 py-2 bg-white text-gray-700 border rounded-md"
+                        id="category" name="category">
+                        <option value="unexplored">Unexplored</option>
+                        <option value="cultural">Cultural</option>
+                        <option value="historical">Historical</option>
+                        <option value="naturistic">Naturistic</option>
+                        <option value="popular">Popular</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="currentStatus"
+                        class="block text-xl md:text-base  mb-2 md:mb-0 font-medium text-gray-700">Availability:</label>
+                    <input type="text"
+                        class="mt-1 block w-full px-4 py-2 bg-gray-50 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                        id="currentStatus" name="currentStatus" placeholder="Enter current status" required>
+                </div>
+                <button type="submit"
+                    class="w-full py-2 bg-primary-100 text-white font-semibold rounded-md hover:bg-green-800 transition duration-300">Submit</button>
+            </form>
+        </div>
     </main>
 
     <script src="/styles/script.js"></script>

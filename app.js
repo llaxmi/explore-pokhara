@@ -4,6 +4,7 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const mongoose = require("mongoose");
+const port = process.env.PORT || 4000;
 require("dotenv").config();
 
 //add here the routes
@@ -34,8 +35,10 @@ app.use("/search", searchRouter);
 app.use(function (req, res, next) {
   next(createError(404));
 });
+
 app.listen(process.env.SERVER_PORT || 8000, () => {
   console.log('Server Started PORT ==> ', process.env.SERVER_PORT);
+
 });
 // Connect to MongoDB
 mongoose
@@ -57,4 +60,5 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render("error");
 });
+
 module.exports = app;

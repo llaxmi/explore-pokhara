@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
+    "nodemon": "^3.1.4",
     "postcss-cli": "^11.0.0"
   },
   "description": "🗺 Wander Pokhara is a web application designed to help users discover and add unexplored destinations they discover. This project aims to provide a user-friendly interface for accessing information about places of interest, activities, and local recommendations.",
